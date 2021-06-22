@@ -1,2 +1,2 @@
 # mlp
-Multi Layer Perceptron from Scratch
+Multi Layer Perceptron for predict numbers from hand pose landmarks
