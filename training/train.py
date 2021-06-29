@@ -34,6 +34,7 @@ class Net():
         if(load_mode==False):
             self.initialize_wb()
         elif(load_mode==True):
+            
             self.w1 = np.load(self.workingPath + "/data/parameters/w1.npy")
             self.w2 = np.load(self.workingPath + "/data/parameters/w2.npy")
             self.w3 = np.load(self.workingPath + "/data/parameters/w3.npy")
@@ -50,13 +51,15 @@ class Net():
             # LOAD from params weights and bias
             pass
         else:
+            # Normal Distribution
             # self.w1 = np.random.randn(self.hidden_layer1[0], self.input_layer[0])
             # self.w2 = np.random.randn(self.hidden_layer2[0], self.hidden_layer1[0])
             # self.w3 = np.random.randn(self.output_layer[0], self.hidden_layer2[0])
             # self.b1 = np.random.randn(self.hidden_layer1[0], 1)
             # self.b2 = np.random.randn(self.hidden_layer2[0], 1)
             # self.b3 = np.random.randn(self.output_layer[0], 1)
-
+            
+            # Uniorm Distribution
             self.w1 = np.random.uniform(0,1,(self.hidden_layer1[0], self.input_layer[0]))
             self.w2 = np.random.uniform(0,1,(self.hidden_layer2[0], self.hidden_layer1[0]))
             self.w3 = np.random.uniform(0,1,(self.output_layer[0], self.hidden_layer2[0]))
