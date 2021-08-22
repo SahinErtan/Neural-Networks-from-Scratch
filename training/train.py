@@ -252,16 +252,19 @@ def main():
 
 
     print("Train basliyor")
-
+    
+    """
+    # ORNEK KULLANIM
+    
     layers = [[42], [1200, "relu"], [600, "relu"], [5, "softmax"]] # relu relu softmax 42-120-60-5
     net = Net(layers)
 
 
-    data =pandas.read_csv("C:\\Users\\ASUS\\PycharmProjects\\tensorflowEnvironment\\Deneme1\\CollectingPose\\poz_train.csv")
+    data =pandas.read_csv("data\\SplitDataset\\poz_train.csv")
     input_data = data.iloc[:,3:45].to_numpy()
     output_data = data.iloc[:,45:50].to_numpy()
 
-    data = pandas.read_csv("C:\\Users\\ASUS\\PycharmProjects\\tensorflowEnvironment\\Deneme1\\CollectingPose\\poz_val.csv")
+    data = pandas.read_csv("data\\SplitDataset\\poz_val.csv")
     validation_data_input = data.iloc[:,3:45].to_numpy()
     validation_data_output = data.iloc[:,45:50].to_numpy()
 
@@ -269,11 +272,11 @@ def main():
               shuffledMode=True, optimizer="None")  # 50 epoch 32 minibatch
 
     print("Test Datasi Hesaplaniyor")
-    data = pandas.read_csv("C:\\Users\\ASUS\\PycharmProjects\\tensorflowEnvironment\\Deneme1\\CollectingPose\\poz_test.csv")
+    data = pandas.read_csv("data\\SplitDataset\\poz_test.csv")
     test_data_input = data.iloc[:, 3:45].to_numpy()
     test_data_output = data.iloc[:, 45:50].to_numpy()
     net.test(test_data_input,test_data_output)
-
+    """
 
 
 
