@@ -15,7 +15,7 @@ Bağımlılıklar
 
 ```python
 from training import train
-layers = [[42], [1200, "relu"], [600, "relu"], [5, "softmax"]]
+layers = [[42], [1200, "relu"], [600, "sigmoid"], [5, "softmax"]]
 net = Net(layers)
 
 data =pandas.read_csv(FILEPATH)
@@ -63,3 +63,5 @@ Eksikler
 - ELUP ve TANH Fonksiyonları Bellekte Aşıma Sebep Oluyor
 - Katman Sayısının Değiştirilememesi
 - İlk rastgele parametre atamaları için seçilebilir randomize metodu (uniform,normal dağılım vs)
+- One Hot Encoding Eklentisi
+- Dropout 
